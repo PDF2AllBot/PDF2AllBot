@@ -5,7 +5,8 @@ from docx import Document
 from PIL import Image
 import os
 
-TOKEN = "8434985374:AAEZ-wNpKT2fxmvBxLEzRBBWsmJcsPcw7l8"
+import os
+TOKEN = os.environ.get("BOT_TOKEN")  # safe token
 
 def start(update: Update, context: CallbackContext):
     update.message.reply_text(
